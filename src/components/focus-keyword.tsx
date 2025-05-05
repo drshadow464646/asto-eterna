@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils"; // Import cn
 
 interface FocusKeywordProps {
   name: string;
@@ -23,7 +23,7 @@ export function FocusKeyword({ name, description, index }: FocusKeywordProps) {
 
   React.useEffect(() => {
     setIsClient(true);
-    // Simple random initial position for floating effect
+    // Simple random initial position for floating effect remains
     setPosition({
       x: (Math.random() - 0.5) * 10, // Adjust range as needed
       y: (Math.random() - 0.5) * 10,
@@ -35,7 +35,7 @@ export function FocusKeyword({ name, description, index }: FocusKeywordProps) {
     return null;
   }
 
-  // Simple animation style - replace with Framer Motion or GSAP for better effects
+  // Animation style applied to the trigger element
   const animationStyle = {
      transform: `translate(${position.x}px, ${position.y}px)`,
      animation: `float ${6 + Math.random() * 4}s ease-in-out infinite alternate`,
@@ -46,13 +46,18 @@ export function FocusKeyword({ name, description, index }: FocusKeywordProps) {
     <>
       <Dialog>
         <DialogTrigger asChild>
-          <Button
-            variant="ghost"
-            className="text-lg md:text-xl font-semibold px-6 py-3 rounded-full border border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/60 hover:text-glow-violet transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
+          {/* Replaced Button with a span, styled as text */}
+          <span
+            className={cn(
+              "text-lg md:text-xl font-semibold px-4 py-2 rounded-md", // Basic padding and rounded corners
+              "text-primary cursor-pointer", // Text color and pointer cursor
+              "hover:text-glow-violet hover:bg-primary/5 transition-colors duration-300 ease-out", // Hover effect
+              "inline-block" // Ensure transform applies correctly
+            )}
             style={animationStyle}
           >
             {name}
-          </Button>
+          </span>
         </DialogTrigger>
         <DialogContent className="card-glass sm:max-w-[425px]">
           <DialogHeader>

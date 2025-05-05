@@ -27,16 +27,7 @@ export function HeroSection() {
       <p className="text-lg md:text-xl text-foreground/80 mb-10 animate-fade-in delay-1000">
         Hi, I’m Suhani — I build ideas into reality.
       </p>
-      <Link href="#about" passHref>
-        <Button
-          variant="outline"
-          size="lg"
-          className="rounded-full px-8 py-6 text-lg border-primary text-primary hover:bg-primary/10 hover:text-primary button-glow-violet animate-bounce-slow delay-1500"
-          aria-label="Scroll down to About section"
-        >
-          Explore <ArrowDown className="ml-2 h-5 w-5" />
-        </Button>
-      </Link>
+       {/* Explore button removed */}
        <style jsx>{`
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(10px); }
