@@ -46,15 +46,16 @@ export function FocusKeyword({ name, description, index }: FocusKeywordProps) {
     <>
       <Dialog>
         <DialogTrigger asChild>
-          {/* Replaced Button with a span, styled as text */}
+          {/* Updated styling: removed padding, background hover; kept text styling and hover glow */}
           <span
             className={cn(
-              "text-lg md:text-xl font-semibold px-4 py-2 rounded-md", // Basic padding and rounded corners
+              "text-lg md:text-xl font-semibold", // Base font size and weight
               "text-primary cursor-pointer", // Text color and pointer cursor
-              "hover:text-glow-violet hover:bg-primary/5 transition-colors duration-300 ease-out", // Hover effect
+              "hover:text-glow-violet transition-colors duration-300 ease-out", // Hover text glow effect
               "inline-block" // Ensure transform applies correctly
             )}
             style={animationStyle}
+            suppressHydrationWarning // Added to suppress minor style mismatches from animation
           >
             {name}
           </span>
