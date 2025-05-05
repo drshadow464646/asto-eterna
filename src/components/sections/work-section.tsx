@@ -4,18 +4,14 @@ import { SectionTitle } from "@/components/section-title";
 const projects = [
   {
     title: "BondUp",
-    description: "Connecting people through shared interests.",
+    description: "Keep track of your interactions and manage connections.", // Updated description
     status: "Coming Soon",
-    // imageUrl removed
-    // imageHint removed
     projectType: "social",
   },
   {
     title: "LinguaCode",
-    description: "Learn coding concepts through language.",
+    description: "Making it easier to switch between languages.", // Updated description
     status: "Coming Soon",
-    // imageUrl removed
-    // imageHint removed
     projectType: "coding",
   },
   // Removed "Unnamed RPG" and "Platformer Prototype"
