@@ -10,18 +10,18 @@ export function AboutSection() {
 
         <CardHeader className="p-0 mb-6">
           <CardTitle className="text-3xl md:text-4xl font-bold text-center text-glow-violet">
-            Making My Own Lane
+            Making Our Own Lane
           </CardTitle>
         </CardHeader>
         <CardContent className="p-0 text-center text-foreground/80 text-base md:text-lg space-y-6">
           <p>
-            As a teen game developer and tech enthusiast, I'm driven by curiosity and the challenge of bringing digital ideas to life. I blend code, design, and a bit of rebellious spirit to create unique experiences.
+            At Asto Volt, we believe innovation doesn’t come from sticking to lanes — it comes from redefining the road itself. We blend design, code, and technology to create digital experiences that are original by intention and impactful by nature.
           </p>
           <blockquote className="text-xl md:text-2xl italic text-secondary font-medium py-4 border-t border-b border-secondary/20 text-glow-blue">
-            “I don’t pick one lane. I make my own.”
+            “Defined by ideas, not categories.”
           </blockquote>
           <p>
-            From crafting immersive game worlds to exploring the potential of AI, I'm constantly learning and building what's next.
+            From immersive game worlds to AI-driven tools, we’re building what’s next — not just what’s expected.
           </p>
         </CardContent>
       </div>
