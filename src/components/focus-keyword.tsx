@@ -1,23 +1,15 @@
 "use client";
 
 import * as React from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { cn } from "@/lib/utils"; // Import cn
+import { cn } from "@/lib/utils";
 
 interface FocusKeywordProps {
   name: string;
-  description: string;
+  description?: string; // Keep description prop for potential future use, but it's not used now
   index: number;
 }
 
-export function FocusKeyword({ name, description, index }: FocusKeywordProps) {
+export function FocusKeyword({ name, index }: FocusKeywordProps) {
   const [isClient, setIsClient] = React.useState(false);
   const [position, setPosition] = React.useState({ x: 0, y: 0 });
 
@@ -44,32 +36,20 @@ export function FocusKeyword({ name, description, index }: FocusKeywordProps) {
 
   return (
     <>
-      <Dialog>
-        <DialogTrigger asChild>
-          {/* Updated styling: removed padding, background hover; kept text styling and hover glow */}
-          <span
-            className={cn(
-              "text-lg md:text-xl font-semibold", // Base font size and weight
-              "text-primary cursor-pointer", // Text color and pointer cursor
-              "hover:text-glow-violet transition-colors duration-300 ease-out", // Hover text glow effect
-              "inline-block" // Ensure transform applies correctly
-            )}
-            style={animationStyle}
-            suppressHydrationWarning // Added to suppress minor style mismatches from animation
-          >
-            {name}
-          </span>
-        </DialogTrigger>
-        <DialogContent className="card-glass sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle className="text-2xl text-glow-violet">{name}</DialogTitle>
-            <DialogDescription className="text-foreground/80 pt-2">
-              {description}
-            </DialogDescription>
-          </DialogHeader>
-          {/* Optional: Add more content to the modal */}
-        </DialogContent>
-      </Dialog>
+      {/* Updated styling: removed cursor pointer; kept text styling and hover glow */}
+      <span
+        className={cn(
+          "text-lg md:text-xl font-semibold", // Base font size and weight
+          "text-primary", // Text color
+          "hover:text-glow-violet transition-colors duration-300 ease-out", // Hover text glow effect
+          "inline-block" // Ensure transform applies correctly
+        )}
+        style={animationStyle}
+        suppressHydrationWarning // Added to suppress minor style mismatches from animation
+      >
+        {name}
+      </span>
+       {/* Keyframes defined directly in the component */}
        <style jsx global>{`
         @keyframes float {
           0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
