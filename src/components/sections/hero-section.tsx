@@ -9,7 +9,9 @@ export function HeroSection() {
     <section
       id="home"
       className="flex flex-col items-center justify-center min-h-screen w-full text-center px-4 relative overflow-hidden"
-      suppressHydrationWarning // Add suppressHydrationWarning to ignore potential browser extension modifications
+      // Add suppressHydrationWarning to ignore potential browser extension modifications
+      // which might add attributes like fdprocessedid causing hydration mismatches.
+      suppressHydrationWarning={true}
     >
       {/* Placeholder for potential animated background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-black via-indigo-950/30 to-black">

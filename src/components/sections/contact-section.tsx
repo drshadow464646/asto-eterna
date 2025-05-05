@@ -36,7 +36,9 @@ export function ContactSection() {
     <section
       id="contact"
       className="py-20 md:py-32 w-full bg-gradient-to-b from-black via-indigo-950/10 to-black"
-      suppressHydrationWarning // Add suppressHydrationWarning to ignore potential browser extension modifications
+      // Add suppressHydrationWarning to ignore potential browser extension modifications
+      // which might add attributes like fdprocessedid causing hydration mismatches.
+      suppressHydrationWarning={true}
     >
       <div className="max-w-3xl mx-auto px-4 text-center">
         <SectionTitle title="Let’s build something." glowColor="blue" />
