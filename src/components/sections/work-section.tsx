@@ -18,22 +18,7 @@ const projects = [
     // imageHint removed
     projectType: "coding",
   },
-  {
-    title: "Unnamed RPG",
-    description: "A narrative-driven adventure game.",
-    status: "In Development",
-    // imageUrl removed
-    // imageHint removed
-    projectType: "rpg",
-  },
-  {
-    title: "Platformer Prototype",
-    description: "Exploring unique movement mechanics.",
-    status: "Prototype",
-    // imageUrl removed
-    // imageHint removed
-    projectType: "platformer",
-  },
+  // Removed "Unnamed RPG" and "Platformer Prototype"
 ];
 
 export function WorkSection() {
