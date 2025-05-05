@@ -33,7 +33,11 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 w-full bg-gradient-to-b from-black via-indigo-950/10 to-black">
+    <section
+      id="contact"
+      className="py-20 md:py-32 w-full bg-gradient-to-b from-black via-indigo-950/10 to-black"
+      suppressHydrationWarning // Add suppressHydrationWarning to ignore potential browser extension modifications
+    >
       <div className="max-w-3xl mx-auto px-4 text-center">
         <SectionTitle title="Let’s build something." glowColor="blue" />
 

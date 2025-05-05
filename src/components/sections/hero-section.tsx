@@ -6,7 +6,11 @@ import Link from 'next/link';
 
 export function HeroSection() {
   return (
-    <section id="home" className="flex flex-col items-center justify-center min-h-screen w-full text-center px-4 relative overflow-hidden">
+    <section
+      id="home"
+      className="flex flex-col items-center justify-center min-h-screen w-full text-center px-4 relative overflow-hidden"
+      suppressHydrationWarning // Add suppressHydrationWarning to ignore potential browser extension modifications
+    >
       {/* Placeholder for potential animated background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-black via-indigo-950/30 to-black">
          {/* Simple particle-like effect using radial gradients */}
