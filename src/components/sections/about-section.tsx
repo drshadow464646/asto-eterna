@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function AboutSection() {
@@ -10,7 +11,7 @@ export function AboutSection() {
 
         <CardHeader className="p-0 mb-6">
           <CardTitle className="text-3xl md:text-4xl font-bold text-center text-glow-violet">
-            Making Our Own Lane
+            not just tech its a vibe
           </CardTitle>
         </CardHeader>
         <CardContent className="p-0 text-center text-foreground/80 text-base md:text-lg space-y-6">
