@@ -1,4 +1,3 @@
-
 'use client';
 
 import * as React from 'react';
@@ -48,6 +47,7 @@ function SubmitButton() {
       className="w-full md:w-auto rounded-xl px-10 py-3 text-lg button-glow-violet transition-all duration-300 transform hover:scale-105"
       disabled={pending}
       aria-disabled={pending}
+      suppressHydrationWarning // Added to suppress hydration warnings
     >
       {pending ? 'Sending...' : 'Send Message'}
       {!pending && <Send className="ml-2 h-5 w-5" />}
@@ -67,6 +67,7 @@ const SocialIcon: React.FC<SocialLinkProps> = ({ href, icon: Icon, label }) => (
       variant="outline"
       size="icon"
       className="rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary button-glow-violet transition-all duration-300 ease-out transform hover:scale-110"
+      suppressHydrationWarning // Added to suppress hydration warnings
     >
       <Icon className="h-5 w-5" />
     </Button>
@@ -155,6 +156,7 @@ export function ContactSection() {
                         required
                         className="input-glow bg-black/30"
                         {...field}
+                        suppressHydrationWarning // Added to suppress hydration warnings
                       />
                     </FormControl>
                     <FormMessage />
@@ -175,6 +177,7 @@ export function ContactSection() {
                         required
                         className="input-glow bg-black/30"
                         {...field}
+                        suppressHydrationWarning // Added to suppress hydration warnings
                       />
                     </FormControl>
                     <FormMessage />
@@ -196,6 +199,7 @@ export function ContactSection() {
                       rows={5}
                       className="input-glow bg-black/30"
                       {...field}
+                      suppressHydrationWarning // Added to suppress hydration warnings
                     />
                   </FormControl>
                   <FormMessage />
@@ -219,4 +223,3 @@ export function ContactSection() {
     </section>
   );
 }
-
