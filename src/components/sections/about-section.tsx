@@ -31,9 +31,6 @@ export function AboutSection() {
           <blockquote className="text-xl md:text-2xl italic text-secondary font-medium py-4 border-t border-b border-secondary/20 text-glow-blue">
             “Defined by ideas, not categories.”
           </blockquote>
-          <p>
-            From immersive game worlds to AI-driven tools, we’re building what’s next — not just what’s expected.
-          </p>
         </CardContent>
       </div>
     </section>

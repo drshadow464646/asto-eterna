@@ -2,8 +2,8 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
-// Removed ArrowDown import as it's not used
-// Removed Link import as it's not used
+import Link from "next/link";
+import { ArrowDown } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -26,10 +26,25 @@ export function HeroSection() {
       <p className="text-xl md:text-2xl text-secondary mb-6 text-glow-blue animate-fade-in delay-500">
         Ctrl + Alt + Glow Up.
       </p>
-      <p className="text-lg md:text-xl text-foreground/80 mb-10 animate-fade-in delay-1000">
+      <p className="text-lg md:text-xl text-foreground/80 mb-6 animate-fade-in delay-1000">
         Hi, I’m Suhani — I build ideas into reality.
       </p>
+      <p className="text-lg md:text-xl text-secondary mb-10 text-glow-blue animate-fade-in delay-1500">
+        From immersive game worlds to AI-driven tools, we’re building what’s next — not just what’s expected.
+      </p>
        
+       <Link href="#about" passHref legacyBehavior>
+        <Button
+          variant="outline"
+          size="lg"
+          className="rounded-full px-10 py-3 text-lg border-primary text-primary hover:bg-primary/10 hover:text-primary button-glow-violet animate-fade-in delay-1500 transform hover:scale-105"
+          aria-label="Scroll down to About section"
+          suppressHydrationWarning
+        >
+          Explore More <ArrowDown className="ml-2 h-5 w-5 animate-bounce-slow" />
+        </Button>
+      </Link>
+
        <style jsx>{`
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(10px); }
@@ -54,3 +69,4 @@ export function HeroSection() {
     </section>
   );
 }
+
