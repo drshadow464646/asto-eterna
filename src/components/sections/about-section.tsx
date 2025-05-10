@@ -10,8 +10,8 @@ export function AboutSection() {
         <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-secondary/10 rounded-full filter blur-xl animate-pulse delay-500"></div>
 
         <CardHeader className="p-0 mb-6">
-          <CardTitle className="text-3xl md:text-4xl font-bold text-center text-glow-violet">
-            not just tech its a vibe
+          <CardTitle className="text-3xl md:text-4xl font-bold text-center text-glow-violet uppercase">
+            NOT JUST TECH IT'S A VIBE
           </CardTitle>
         </CardHeader>
         <CardContent className="p-0 text-center text-foreground/80 text-base md:text-lg space-y-6">
@@ -29,3 +29,4 @@ export function AboutSection() {
     </section>
   );
 }
+
