@@ -16,7 +16,17 @@ export function AboutSection() {
         </CardHeader>
         <CardContent className="p-0 text-center text-foreground/80 text-base md:text-lg space-y-6">
           <p>
-            At ASTO ETERNA, we believe innovation doesn’t come from sticking to lanes — it comes from redefining the road itself. We blend design, code, and technology to create digital experiences that are original by intention and impactful by nature.
+            we don’t just follow the path — we redefine it.
+          </p>
+          <div className="text-center text-primary/60 tracking-widest">──────</div>
+          <p>
+            Innovation isn’t about staying in your lane. <br />
+            It’s about charting new territory.
+          </p>
+          <div className="text-center text-primary/60 tracking-widest">──────</div>
+          <p>
+            We blend design, code, and cutting-edge technology <br />
+            to craft digital experiences that aren’t just original — they’re transformative.
           </p>
           <blockquote className="text-xl md:text-2xl italic text-secondary font-medium py-4 border-t border-b border-secondary/20 text-glow-blue">
             “Defined by ideas, not categories.”
