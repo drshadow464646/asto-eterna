@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'AstoVolt Digital Lab',
+  title: 'ASTO ETERNA Digital Lab',
   description: 'Ctrl + Alt + Glow Up. Suhani\'s personal lab for tech, design, and expression.',
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           inter.variable
         )}
-        suppressHydrationWarning={true} // Added to ignore potential browser extension modifications
+        suppressHydrationWarning={true} 
       >
         {children}
         <Toaster />

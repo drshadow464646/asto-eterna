@@ -15,7 +15,7 @@ export function AboutSection() {
         </CardHeader>
         <CardContent className="p-0 text-center text-foreground/80 text-base md:text-lg space-y-6">
           <p>
-            At Asto Volt, we believe innovation doesn’t come from sticking to lanes — it comes from redefining the road itself. We blend design, code, and technology to create digital experiences that are original by intention and impactful by nature.
+            At ASTO ETERNA, we believe innovation doesn’t come from sticking to lanes — it comes from redefining the road itself. We blend design, code, and technology to create digital experiences that are original by intention and impactful by nature.
           </p>
           <blockquote className="text-xl md:text-2xl italic text-secondary font-medium py-4 border-t border-b border-secondary/20 text-glow-blue">
             “Defined by ideas, not categories.”

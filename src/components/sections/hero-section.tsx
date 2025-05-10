@@ -9,6 +9,7 @@ export function HeroSection() {
     <section
       id="home"
       className="flex flex-col items-center justify-center min-h-screen w-full text-center px-4 relative overflow-hidden"
+      suppressHydrationWarning // Added to suppress minor style mismatches from animation
     >
       {/* Placeholder for potential animated background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-black via-indigo-950/30 to-black">
@@ -19,7 +20,7 @@ export function HeroSection() {
       </div>
 
       <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-widest uppercase mb-4 text-glow-violet animate-fade-in-slow">
-        ASTO VOLT
+        ASTO ETERNA
       </h1>
       <p className="text-xl md:text-2xl text-secondary mb-6 text-glow-blue animate-fade-in delay-500">
         Ctrl + Alt + Glow Up.
@@ -27,7 +28,7 @@ export function HeroSection() {
       <p className="text-lg md:text-xl text-foreground/80 mb-10 animate-fade-in delay-1000">
         Hi, I’m Suhani — I build ideas into reality.
       </p>
-       {/* Explore button removed */}
+       
        <style jsx>{`
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(10px); }
