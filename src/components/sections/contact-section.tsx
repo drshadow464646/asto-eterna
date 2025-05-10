@@ -2,7 +2,8 @@
 'use client';
 
 import * as React from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react'; // Changed from 'react-dom'
+import { useFormStatus } from 'react-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -75,7 +76,7 @@ const SocialIcon: React.FC<SocialLinkProps> = ({ href, icon: Icon, label }) => (
 
 export function ContactSection() {
   const { toast } = useToast();
-  const [state, formAction] = useFormState(sendEmailAction, initialState);
+  const [state, formAction] = useActionState(sendEmailAction, initialState); // Changed from useFormState
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
@@ -84,6 +85,9 @@ export function ContactSection() {
       email: '',
       message: '',
     },
+    // Ensure that if state.fields is populated due to an error, the form reflects those values.
+    // This might be redundant if sendEmailAction correctly populates fields on error.
+    values: state.fields as ContactFormValues | undefined,
   });
 
   React.useEffect(() => {
@@ -97,17 +101,37 @@ export function ContactSection() {
         form.reset();
       }
     }
-    if (state.issues) {
-       state.issues.forEach(issue => {
-         const fieldName = issue.includes("Name") ? "name" : issue.includes("Email") ? "email" : "message";
-         form.setError(fieldName as keyof ContactFormValues, { type: "manual", message: issue });
+    // This part was attempting to set errors based on state.issues.
+    // If sendEmailAction returns field-specific errors in state.fields,
+    // react-hook-form's resolver might handle it.
+    // If state.issues is meant for general non-field errors, this is fine.
+    // If state.issues contains field-specific error messages, ensure they are mapped correctly.
+    if (state.issues && !state.success) {
+       const fieldErrors = parsedErrorToFieldErrors(state.issues, formSchema);
+       Object.entries(fieldErrors).forEach(([fieldName, message]) => {
+         form.setError(fieldName as keyof ContactFormValues, { type: "manual", message });
        });
     }
+
   }, [state, toast, form]);
+
+  // Helper function to map Zod-like issues to field errors
+  // This is a simplified example, adjust based on actual `state.issues` structure
+  function parsedErrorToFieldErrors(issues: string[], schema: typeof formSchema) {
+    const fieldErrors: Record<string, string> = {};
+    issues.forEach(issue => {
+      // Attempt to infer field name from issue message. This is brittle.
+      // A better approach is if `sendEmailAction` returns structured field errors.
+      if (issue.toLowerCase().includes("name")) fieldErrors.name = issue;
+      else if (issue.toLowerCase().includes("email")) fieldErrors.email = issue;
+      else if (issue.toLowerCase().includes("message")) fieldErrors.message = issue;
+    });
+    return fieldErrors;
+  }
 
 
   return (
-    <section id="contact" className="py-20 md:py-32 w-full bg-gradient-to-b from-black via-indigo-950/10 to-black">
+    <section id="contact" className="py-20 md:py-32 w-full bg-gradient-to-b from-black via-indigo-950/10 to-black" suppressHydrationWarning>
       <div className="max-w-3xl mx-auto px-4 text-center">
         <SectionTitle title="Let Us Build Together" glowColor="blue" />
         
@@ -183,8 +207,8 @@ export function ContactSection() {
         </Form>
 
         <div className="mt-16 flex justify-center items-center gap-6">
-          <SocialIcon href="https://play.google.com" icon={Smartphone} label="Play Store" />
-          <SocialIcon href="https://twitter.com" icon={Twitter} label="Twitter" />
+          <SocialIcon href="https://play.google.com/store" icon={Smartphone} label="Play Store" />
+          <SocialIcon href="https://x.com" icon={Twitter} label="Twitter" />
           <SocialIcon href="https://instagram.com" icon={Instagram} label="Instagram" />
           <SocialIcon href="https://youtube.com" icon={Youtube} label="YouTube" />
         </div>
@@ -195,3 +219,4 @@ export function ContactSection() {
     </section>
   );
 }
+
