@@ -3,7 +3,7 @@ import { SectionTitle } from "@/components/section-title";
 
 const projects = [
   {
-    title: "BondUp",
+    title: "LoopIn",
     description: "Keep track of your interactions and manage connections.", // Updated description
     status: "Coming Soon",
     projectType: "social",
