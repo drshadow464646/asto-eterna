@@ -1,8 +1,9 @@
+
 'use client';
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
-import Link from 'next/link';
+// Removed ArrowDown import as it's not used
+// Removed Link import as it's not used
 
 export function HeroSection() {
   return (
