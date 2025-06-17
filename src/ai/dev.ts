@@ -1,1 +1,1 @@
-// Flows will be imported for their side effects in this file.
+// This file has been cleared as AI functionalities were removed.
