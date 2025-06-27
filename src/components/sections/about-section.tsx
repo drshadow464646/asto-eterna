@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-32 w-full max-w-4xl mx-auto px-4 flex justify-center items-center">
+    <section id="about" className="pt-20 md:pt-32 w-full max-w-4xl mx-auto px-4 flex justify-center items-center">
       <div className="card-glass p-8 md:p-12 relative overflow-hidden">
          {/* Floating shapes placeholder */}
         <div className="absolute -top-10 -left-10 w-24 h-24 bg-primary/10 rounded-full filter blur-xl animate-pulse"></div>
@@ -23,12 +23,8 @@ export function AboutSection() {
             We blend design, code, and cutting-edge technology <br />
             to craft digital experiences that aren’t just original — they’re transformative.
           </p>
-          <blockquote className="text-xl md:text-2xl italic text-secondary font-medium py-4 border-t border-b border-secondary/20 text-glow-blue">
-            “Defined by ideas, not categories.”
-          </blockquote>
         </CardContent>
       </div>
     </section>
   );
 }
-
