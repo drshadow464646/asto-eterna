@@ -33,12 +33,12 @@ export function HeroSection() {
         From immersive game worlds to AI-driven tools, we’re building what’s next — not just what’s expected.
       </p>
        
-       <Link href="#about" passHref legacyBehavior>
+       <Link href="#work" passHref legacyBehavior>
         <Button
           variant="outline"
           size="lg"
           className="rounded-full px-10 py-3 text-lg border-primary text-primary hover:bg-primary/10 hover:text-primary button-glow-violet animate-fade-in delay-1500 transform hover:scale-105"
-          aria-label="Scroll down to About section"
+          aria-label="Scroll down to Our Growth section"
           suppressHydrationWarning
         >
           Explore More <ArrowDown className="ml-2 h-5 w-5 animate-bounce-slow" />
@@ -69,4 +69,3 @@ export function HeroSection() {
     </section>
   );
 }
-
