@@ -45,16 +45,16 @@ export function ConnectSection() {
               <h3 className="text-2xl font-semibold mb-4 text-glow-violet">About Me</h3>
               <div className="space-y-4 text-foreground/80">
                 <p>
-                  I'm Suhani Arya, a high school student and passionate game developer.
+                  Hey, I’m Suhani Arya — a high school student by age, but a startup founder by spirit (and caffeine levels).
                 </p>
                 <p>
-                  I create interactive, meaningful games using Unity, often focusing on real-life skills or social challenges.
+                  I build digital things that do things — from games that teach real-life skills to tools that solve problems. Whether it’s an app, a game, or a half-baked prototype at 2 a.m., I love turning wild ideas into useful experiences.
                 </p>
                 <p>
-                  I also work on startup ideas, blending tech with creativity to build useful digital experiences.
+                  I do stuff with Unity and with a love for storytelling, but now I’m diving deeper into AI, product design, and making tech feel a little more… human.
                 </p>
                 <p>
-                  I'm exploring AI, game design, and user-centered development with a goal of making tech more human.
+                  Basically, if it’s creative, a little chaotic, and possibly life-improving — I’m in.
                 </p>
               </div>
             </div>
