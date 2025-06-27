@@ -1,4 +1,3 @@
-
 'use client';
 
 import * as React from 'react';
@@ -81,12 +80,6 @@ export function ConnectSection() {
                   text="linkedin.com/in/suhani-arya-b10990364"
                 />
               </div>
-            </div>
-            
-            <div className="border-t border-white/10 pt-8">
-              <p className="text-lg text-secondary text-glow-blue italic">
-                “Have a cool idea or want to collaborate on a project? Reach out – I’d love to hear from you.”
-              </p>
             </div>
           </CardContent>
         </Card>
