@@ -6,7 +6,7 @@ import Link from 'next/link';
 interface ProjectCardProps {
   title: string;
   description: string;
-  status: string;
+  status?: string;
   projectType?: "social" | "coding" | "rpg" | "platformer" | "burner";
   url?: string;
 }
@@ -34,15 +34,17 @@ export function ProjectCard({ title, description, status, projectType, url }: Pr
       <div className="relative flex items-center justify-center h-40 mb-4 rounded-md border border-white/10 bg-card/30 overflow-hidden">
         {renderIcon()}
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-50"></div>
-        <Badge
-          variant="secondary"
-          className={cn(
-            "absolute top-2 right-2 bg-secondary/80 text-secondary-foreground backdrop-blur-sm transition-all duration-300 ease-out opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0",
-            status === "Coming Soon" && "bg-primary/80 text-primary-foreground"
-          )}
-        >
-          {status}
-        </Badge>
+        {status && (
+          <Badge
+            variant="secondary"
+            className={cn(
+              "absolute top-2 right-2 bg-secondary/80 text-secondary-foreground backdrop-blur-sm transition-all duration-300 ease-out opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0",
+              status === "Coming Soon" && "bg-primary/80 text-primary-foreground"
+            )}
+          >
+            {status}
+          </Badge>
+        )}
       </div>
 
       <div className="flex-grow">

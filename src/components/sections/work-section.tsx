@@ -5,26 +5,22 @@ const projects = [
   {
     title: "Tether",
     description: "Keep track of your interactions and manage connections.",
-    status: "Coming Soon",
     projectType: "social",
   },
   {
     title: "LinguaCode",
     description: "Making it easier to switch between languages.",
-    status: "Coming Soon",
     projectType: "coding",
   },
   {
     title: "Ashground",
     description: "A digital burner.",
-    status: "Coming Soon",
     projectType: "burner",
     url: "https://ashground.com",
   },
   {
     title: "Drillzy",
     description: "Level up daily.",
-    status: "Coming Soon",
     projectType: "rpg",
   },
 ];
