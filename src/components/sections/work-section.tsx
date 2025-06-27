@@ -8,9 +8,10 @@ const projects = [
     projectType: "social",
   },
   {
-    title: "LinguaCode",
+    title: "Tranzoid",
     description: "Making it easier to switch between languages.",
     projectType: "coding",
+    url: "https://tranzoid.com",
   },
   {
     title: "Ashground",
