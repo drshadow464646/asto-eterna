@@ -1,13 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { Users, Code, Gamepad, Puzzle } from "lucide-react"; // Import relevant icons
+import { Users, Code, Gamepad, Puzzle, Flame } from "lucide-react"; // Import relevant icons
 
 interface ProjectCardProps {
   title: string;
   description: string;
   status: string;
   // imageUrl and imageHint removed
-  projectType?: "social" | "coding" | "rpg" | "platformer"; // Optional type to determine icon
+  projectType?: "social" | "coding" | "rpg" | "platformer" | "burner"; // Optional type to determine icon
 }
 
 export function ProjectCard({ title, description, status, projectType }: ProjectCardProps) {
@@ -21,6 +21,8 @@ export function ProjectCard({ title, description, status, projectType }: Project
         return <Gamepad className="w-12 h-12 text-primary/60" />;
       case "platformer":
         return <Puzzle className="w-12 h-12 text-primary/60" />;
+      case "burner":
+        return <Flame className="w-12 h-12 text-primary/60" />;
       default:
         return <Code className="w-12 h-12 text-primary/60" />; // Default icon
     }

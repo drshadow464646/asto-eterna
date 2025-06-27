@@ -18,7 +18,7 @@ const projects = [
     title: "Ashground",
     description: "A digital burner.",
     status: "Coming Soon",
-    projectType: "social",
+    projectType: "burner",
   },
   {
     title: "Drillzy",
