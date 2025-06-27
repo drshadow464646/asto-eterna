@@ -20,11 +20,6 @@ export function AboutSection() {
           </p>
           <div className="text-center text-primary/60 tracking-widest">──────</div>
           <p>
-            Innovation isn’t about staying in your lane. <br />
-            It’s about charting new territory.
-          </p>
-          <div className="text-center text-primary/60 tracking-widest">──────</div>
-          <p>
             We blend design, code, and cutting-edge technology <br />
             to craft digital experiences that aren’t just original — they’re transformative.
           </p>
