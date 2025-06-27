@@ -34,6 +34,12 @@ const ContactLink: React.FC<SocialLinkProps> = ({ href, icon: Icon, label, text 
 
 
 export function ConnectSection() {
+  const [year, setYear] = React.useState<number | null>(null);
+
+  React.useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <section id="connect" className="py-20 md:py-32 w-full bg-gradient-to-b from-black via-indigo-950/5 to-black" suppressHydrationWarning>
       <div className="max-w-3xl mx-auto px-4 text-center">
@@ -84,9 +90,11 @@ export function ConnectSection() {
             </div>
           </CardContent>
         </Card>
-         <p className="mt-20 text-xs text-foreground/40 tracking-wider">
-          ASTO ETERNA &copy; {new Date().getFullYear()}
-        </p>
+        {year && (
+          <p className="mt-20 text-xs text-foreground/40 tracking-wider">
+            ASTO ETERNA &copy; {year}
+          </p>
+        )}
       </div>
     </section>
   );
