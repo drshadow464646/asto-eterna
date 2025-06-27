@@ -12,25 +12,27 @@ interface FocusKeywordProps {
 export function FocusKeyword({ name, index }: FocusKeywordProps) {
   const [isClient, setIsClient] = React.useState(false);
   const [position, setPosition] = React.useState({ x: 0, y: 0 });
+  const [animationDuration, setAnimationDuration] = React.useState(10); // Default duration
 
   React.useEffect(() => {
     setIsClient(true);
-    // Simple random initial position for floating effect remains
+    // Set random values only on the client to prevent hydration mismatch
     setPosition({
-      x: (Math.random() - 0.5) * 10, // Adjust range as needed
+      x: (Math.random() - 0.5) * 10,
       y: (Math.random() - 0.5) * 10,
     });
+    setAnimationDuration(6 + Math.random() * 4);
   }, []);
 
   if (!isClient) {
-    // Render null or a placeholder on the server
+    // Render null on the server and initial client render to avoid mismatch
     return null;
   }
 
   // Animation style applied to the trigger element
   const animationStyle = {
      transform: `translate(${position.x}px, ${position.y}px)`,
-     animation: `float ${6 + Math.random() * 4}s ease-in-out infinite alternate`,
+     animation: `float ${animationDuration}s ease-in-out infinite alternate`,
      animationDelay: `${index * 0.2}s`, // Stagger animation
   };
 
