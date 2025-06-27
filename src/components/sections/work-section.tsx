@@ -19,6 +19,7 @@ const projects = [
     description: "A digital burner.",
     status: "Coming Soon",
     projectType: "burner",
+    url: "https://ashground.com",
   },
   {
     title: "Drillzy",
