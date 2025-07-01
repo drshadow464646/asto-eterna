@@ -50,7 +50,7 @@ export function ConnectSection() {
               <h3 className="text-2xl font-semibold mb-4 text-glow-violet">About Me</h3>
               <div className="space-y-4 text-foreground/80">
                 <p>
-                  Hey, I’m Suhani Arya — a high school student by age, but a startup founder by spirit (and caffeine levels).
+                  Hey, I’m Suhani — a high school student by age, but a startup founder by spirit (and caffeine levels).
                 </p>
                 <p>
                   I build digital things that do things — from games that teach real-life skills to tools that solve problems. Whether it’s an app, a game, or a half-baked prototype at 2 a.m., I love turning wild ideas into useful experiences.
@@ -76,7 +76,7 @@ export function ConnectSection() {
                 <ContactLink 
                   href="https://www.linkedin.com/in/suhani-arya-b10990364"
                   icon={Linkedin}
-                  label="Suhani Arya's LinkedIn Profile"
+                  label="Suhani's LinkedIn Profile"
                   text="linkedin.com/in/suhani-arya-b10990364"
                 />
               </div>
